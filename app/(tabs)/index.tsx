@@ -1,75 +1,293 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Button, TouchableOpacity } from 'react-native'
+import React from 'react'
+import Header from '@/components/Header'
+import { Colors } from '@/constants/Colors'
+import { Image } from 'expo-image'
+import Hr from '@/components/ui/Hr'
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+const HomeScreen = () => {
 
-export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
-  );
+    <>
+      <Header />
+      <View style={[styles.container]}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          {/* <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          > */}
+          <View style={{
+            flexDirection: "row",
+            justifyContent: "flex-start",
+            alignItems: "flex-start",
+            paddingVertical: 20,
+            gap: 15,
+            paddingHorizontal: 10,
+          }}>
+            <Button
+              title="Spend"
+              color={Colors.grey}
+            />
+            <Button title="Save" color={Colors.grey} />
+            <Button title="Borrow" color={Colors.grey} />
+          </View>
+          <View style={{ paddingVertical: 10, paddingHorizontal: 20, alignItems: 'flex-start', display: 'flex', flexDirection: 'row', gap: 10 }}>
+            <Image
+              source={require('@/assets/svgs/nigeria.svg')}
+              style={{ width: 30, height: 30 }}
+            />
+            <View style={{ alignItems: 'flex-start', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', gap: 45 }}>
+              <Text style={{ color: Colors.white, fontSize: 16, fontWeight: 'bold', marginTop: 5 }}>
+                Nigerian Naira
+              </Text>
+            </View>
+          </View>
+          {/* </View> */}
+          <View style={{ flexDirection: 'column', paddingHorizontal: 20, }}>
+            <View style={{ alignItems: 'flex-start', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: 10 }}>
+              <Text
+                style={{ color: Colors.white, fontSize: 36, fontWeight: 700 }}
+              >
+                ₦11,475.<Text style={{ fontSize: 22, fontWeight: 400 }}>00</Text>
+              </Text>
+
+              <Image
+                source={require('@/assets/svgs/more.svg')}
+                style={{ width: 30, height: 30, marginTop: 10 }}
+              />
+            </View>
+
+            <Text
+              style={{
+                color: Colors.gray,
+                fontSize: 16,
+                marginTop: 10,
+              }}
+            >
+              Last Updated 2 minutes ago.
+            </Text>
+          </View>
+
+          <View style={{ display: 'flex', paddingHorizontal: 20, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 20 }}>
+            <TouchableOpacity style={styles.button}>
+              <Image
+                source={require('@/assets/svgs/send-outline.svg')}
+                style={{ width: 20, height: 20, marginRight: 10 }}
+              />
+              <Text style={styles.text}>Transfer</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.button}>
+              <Image
+                source={require('@/assets/svgs/add.svg')}
+                style={{ width: 20, height: 20, marginRight: 10 }}
+              />
+              <Text style={styles.text}>Add Money</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={{ marginTop: 40, alignItems: 'flex-start', paddingHorizontal: 20, }}>
+            <Text style={{ color: Colors.white, fontSize: 16, fontWeight: 'bold' }}>
+              Quick Access
+            </Text>
+
+            <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 20, gap: 10 }}>
+              <TouchableOpacity style={styles.buttons}>
+                <Image
+                  source={require('@/assets/svgs/send.svg')}
+                  style={{ width: 20, height: 20, marginRight: 10 }}
+                />
+                <Text style={styles.text}>Send</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.buttons}>
+                <Image
+                  source={require('@/assets/svgs/airtime.svg')}
+                  style={{ width: 20, height: 20, marginRight: 10, resizeMode: 'contain' }}
+                />
+                <Text style={styles.text}>Airtime</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.buttons}>
+                <Image
+                  source={require('@/assets/svgs/bills.svg')}
+                  style={{ width: 20, height: 20, marginRight: 10, resizeMode: 'contain' }}
+                />
+                <Text style={styles.text}>Bills</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 20, backgroundColor: Colors.grey, width: "100%" }}>
+            <Text style={{
+              color: Colors.gray,
+              marginLeft: 8,
+              fontWeight: 'bold',
+              fontSize: 16,
+              textAlign: 'center',
+            }}>
+              8/08/2025
+            </Text>
+          </View>
+
+          <View style={{
+            paddingHorizontal: 20,
+          }}>
+            <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: 20, width: "100%" }}>
+              <Image
+                source={require('@/assets/svgs/acessBank.svg')}
+                style={{ width: 40, height: 40 }}
+              />
+              <View style={{}}>
+                <Text style={{
+                  color: Colors.white,
+                  marginLeft: 8,
+                  fontWeight: 'bold',
+                  fontSize: 16,
+                  textAlign: 'center',
+                }}>Mary John Ojuelegba</Text>
+                <Text style={{
+                  color: Colors.gray,
+                  marginLeft: 8,
+                  fontWeight: 'semibold',
+                  fontSize: 16,
+                }}>4:06 PM</Text>
+              </View>
+
+              <Text style={{
+                color: Colors.white,
+                marginLeft: 58,
+                marginTop: -15,
+                fontWeight: 'bold',
+                fontSize: 16,
+                textAlign: 'center',
+              }}>₦1,500</Text>
+            </View>
+            <Hr />
+
+            <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: 20, width: "100%" }}>
+              <Image
+                source={require('@/assets/svgs/mtn.svg')}
+                style={{ width: 40, height: 40 }}
+              />
+              <View style={{}}>
+                <Text style={{
+                  color: Colors.white,
+                  marginLeft: 8,
+                  fontWeight: 'bold',
+                  fontSize: 16,
+                  textAlign: 'center',
+                }}>MTN NG Data 091******9</Text>
+                <Text style={{
+                  color: Colors.gray,
+                  marginLeft: 8,
+                  fontWeight: 'semibold',
+                  fontSize: 16,
+                }}>10:15 AM</Text>
+              </View>
+
+              <Text style={{
+                color: Colors.white,
+                marginLeft: 28,
+                marginTop: -15,
+                fontWeight: 'bold',
+                fontSize: 16,
+                textAlign: 'center',
+              }}>₦500</Text>
+            </View>
+            <Hr />
+
+            <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: 20, width: "100%" }}>
+              <Image
+                source={require('@/assets/svgs/gtco.svg')}
+                style={{ width: 40, height: 40 }}
+              />
+              <View style={{}}>
+                <Text style={{
+                  color: Colors.white,
+                  marginLeft: 8,
+                  fontWeight: 'bold',
+                  fontSize: 16,
+                  textAlign: 'center',
+                }}>Chukwuma Daniel Ujala</Text>
+                <Text style={{
+                  color: Colors.gray,
+                  marginLeft: 8,
+                  fontWeight: 'semibold',
+                  fontSize: 16,
+                }}>8:05 AM</Text>
+              </View>
+
+              <Text style={{
+                color: Colors.green,
+                marginLeft: 38,
+                marginTop: -15,
+                fontWeight: 'bold',
+                fontSize: 16,
+                textAlign: 'center',
+              }}>+₦2,000</Text>
+            </View>
+
+            <TouchableOpacity style={styles.more}>
+              <Image
+                source={require('@/assets/svgs/search.svg')}
+                style={{ width: 25, height: 25, resizeMode: "contain" }}
+              />
+              <Text style={styles.text}>View More</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+      </View>
+    </>
+  )
 }
 
+export default HomeScreen;
+
 const styles = StyleSheet.create({
-  titleContainer: {
+  container: {
+    flex: 1,
+    backgroundColor: Colors.black,
+    // 
+  },
+  button: {
     flexDirection: 'row',
+    backgroundColor: Colors.grey,
+    padding: 12,
+    borderRadius: 8,
     alignItems: 'center',
-    gap: 8,
+    justifyContent: 'center',
+    width: '48%',
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+  buttons: {
+    flexDirection: 'row',
+    backgroundColor: Colors.grey,
+    padding: 10,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  text: {
+    color: '#fff',
+    marginLeft: 8,
+    fontWeight: 'bold',
+    fontSize: 16,
+    textAlign: 'center',
+  },
+  more: {
+    display: "flex",
+    flexDirection: 'row',
+    backgroundColor: Colors.grey,
+    padding: 10,
+    borderRadius: 8,
+    marginTop: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '54%',
+    marginLeft: "25%",
+    marginBottom: 10,
   },
 });
